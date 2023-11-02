@@ -23,13 +23,13 @@ const NewBookForm = () => {
       pages,
     };
 
-    books([...books, newBookObj]);
+    setBooks([...books, newBookObj]);
   };
 
   return (
     <form onSubmit={handleSubmit} className="form">
       <InputField label="Title" value={title} onChange={setTitle} />
-      <InputField label="Author" value={author} onChange={author} />
+      <InputField label="Author" value={author} onChange={setAuthor} />
       <InputField label="Date Published" value={datePublished} type="date" />
       <button type="submit">Add Book</button>
     </form>
