@@ -6,7 +6,7 @@ import "./BookTable.css";
 // How can you give BookTable access to that books array?
 
 const BookTable = () => {
-  const bookItems = books.map((book) => <div>{book}</div>);
+  const bookItems = books.map((book) => <div key={book.id}>{book.title}</div>);
 
   return (
     <div>
